@@ -3,7 +3,20 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ground
+  - Ladder
+  - Diamond
+  - Enemy
+  - Head
+  - ChainSaw
+  - Obstacle
+  - Button
+  - Trigger1
+  - Trigger2
+  - Trigger3
+  - Trigger4
+  - Trigger5
   layers:
   - Default
   - TransparentFX
@@ -11,8 +24,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - TitleMap
+  - Bg
   - 
   - 
   - 
@@ -40,4 +53,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 24289297
     locked: 0
