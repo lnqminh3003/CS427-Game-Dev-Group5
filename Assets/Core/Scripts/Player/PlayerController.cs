@@ -75,7 +75,6 @@ public class PlayerController : MonoBehaviour
             GetComponent<PlayerHealth>().EffectJump.SetActive(true);
             StartCoroutine(CancelAnimationEffectJump());
         }
-        Debug.LogWarning(countJump);
 
         if ((Input.GetKeyDown(KeyCode.S) || InputController.Instance.isKeyDashPress) && canDash)
         {

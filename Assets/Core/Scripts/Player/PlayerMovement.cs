@@ -43,10 +43,10 @@ public class PlayerMovement : MonoBehaviour
             }
             else
             {
-                // if (!AudioManager.instance.isPlayingSfx("running"))
-                // {
-                //     AudioManager.instance.PlaySfx("running");
-                // }
+                if (!AudioManager.instance.isPlayingSfx("running"))
+                {
+                    AudioManager.instance.PlaySfx("running");
+                }
             }
         }
         else
