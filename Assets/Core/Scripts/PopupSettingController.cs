@@ -17,7 +17,7 @@ public class PopupSettingController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        AudioManager.instance.SetVolumeMusic(sliderMusic.value);
-        AudioManager.instance.SetVolumeSound(sliderSound.value);
+        //AudioManager.instance.SetVolumeMusic(sliderMusic.value);
+        //AudioManager.instance.SetVolumeSound(sliderSound.value);
     }
 }

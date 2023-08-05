@@ -32,57 +32,21 @@ public class AudioManager : MonoBehaviour
 
     }
 
-    public void SetVolume(float _soundtrackVolume, float _sfxVolume)
-    {
-        SetVolumeMusic(_soundtrackVolume);
-        SetVolumeSound(_sfxVolume);
-    }
-
-    public void SetVolumeMusic(float _soundtrackVolume)
-    {
-        
-    }
-
-    public void SetVolumeSound(float _sfxVolume)
-    {
-       
-    }
-
-    public bool isPlayingSoundtrack()
-    {
-        return true;
-    }
-
-    public bool isPlayingSfx(string key)
-    {
-        return true;
-    }
-
-    public void PlayRandomSoundtrack()
-    {
-
-    }
-
-    public void PlaySoundtrack(string key)
-    {
-
-    }
-
     public void PlaySfx(string key)
     {
+        if (key == "jump")
+        {
+            audioSource.clip = sfx[1];
+        }
+        else if (key == "dash")
+        {
+            audioSource.clip = sfx[0];
+        }
+        else if(key== "die")
+        {
+            audioSource.clip = sfx[2];
+        }
+        audioSource.Play();
 
     }
-
-    public void Stop(string key, SoundType type)
-    {
-
-    }
-
-    public void StopSoundTrack()
-    {
-       
-    }
-
-
-
 }

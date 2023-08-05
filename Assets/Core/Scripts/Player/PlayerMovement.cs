@@ -24,11 +24,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isGround) rd.velocity += new Vector2(playerDirection * m_AddVelocity_x, 0f);
         rd.velocity = new Vector2(rd.velocity.x, rd.velocity.y > 0 ? (rd.velocity.y * 0.7f) : 0f);
-        Debug.LogWarning(">>" + rd.velocity);
         rd.velocity += new Vector2(0f, m_AddVelocity_y * (isGround ? 1f : 0.8f));
-        Debug.LogWarning(m_AddVelocity_y * (isGround ? 1f : 0.8f));
         AudioManager.instance.PlaySfx("jump");
-        //AudioManager.instance.Stop("running", SoundType.Sfx);
     }
 
     public void Moving(float direction, bool isGround)
@@ -37,17 +34,6 @@ public class PlayerMovement : MonoBehaviour
         {
 
             rd.velocity = new Vector2(direction * speedMove, rd.velocity.y);
-            if (direction != 0)
-            {
-                AudioManager.instance.Stop("running", SoundType.Sfx);
-            }
-            else
-            {
-                if (!AudioManager.instance.isPlayingSfx("running"))
-                {
-                    AudioManager.instance.PlaySfx("running");
-                }
-            }
         }
         else
         {

@@ -2650,7 +2650,8 @@ MonoBehaviour:
   sfx:
   - {fileID: 8300000, guid: e525bd68f245be14f87a1a828c6261f1, type: 3}
   - {fileID: 8300000, guid: 7950addf78ce8704c808c7a9dda3150f, type: 3}
-  audioSource: {fileID: 0}
+  - {fileID: 8300000, guid: 1bde161d18a3baa4293396cc4726c6a9, type: 3}
+  audioSource: {fileID: 1482769941}
 --- !u!4 &1482769939
 Transform:
   m_ObjectHideFlags: 0
@@ -2678,7 +2679,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1265fd399ca4eb24bbe3335771c43a87, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.086
   m_Pitch: 1
   Loop: 1
   Mute: 0
