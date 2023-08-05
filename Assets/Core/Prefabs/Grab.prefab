@@ -10,10 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2909679525179637194}
   - component: {fileID: 2930409664627294330}
-  - component: {fileID: 4336083513956158884}
-  - component: {fileID: 7305259454390615857}
+  - component: {fileID: 2134026786971215851}
   m_Layer: 0
-  m_Name: Gate
+  m_Name: Grab
   m_TagString: Gate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,7 +86,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4336083513956158884
+--- !u!114 &2134026786971215851
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,42 +95,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4983287044167532105}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdf50b06f36127f48be1ac854ffaeb8a, type: 3}
+  m_Script: {fileID: 11500000, guid: 4b212945e50fe434a9448f27de1b2677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!60 &7305259454390615857
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4983287044167532105}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -5.749605, y: 0.90548635}
-      - {x: -7.6346188, y: -0.72586906}
-      - {x: 8.154576, y: -0.7120518}
-      - {x: 7.6398315, y: 0.09068829}
-      - {x: 2.712613, y: 0.065378465}
-      - {x: 8.237763, y: 0.10086125}
-      - {x: 6.2289248, y: 0.40410873}
-      - {x: 0.6810217, y: 0.93445057}
+  spawnBullet: {fileID: 5143759384810599325}
+  bullet: {fileID: 498768434614282470, guid: 32a9ba16acf11468da6dd84f772f172f, type: 3}
+  time: 2
 --- !u!1 &5143759384810599325
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,7 +115,7 @@ GameObject:
   - component: {fileID: 7202442675320921276}
   m_Layer: 0
   m_Name: Crabby
-  m_TagString: Endpoint
+  m_TagString: Gate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -246,7 +215,7 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!95 &7202442675320921276
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -263,4 +232,4 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0

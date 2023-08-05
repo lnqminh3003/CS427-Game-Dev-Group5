@@ -34,27 +34,27 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySfx(string key)
     {
-        if (key == "jump")
-        {
-            audioSource.clip = sfx[1];
-        }
-        else if (key == "dash")
-        {
-            audioSource.clip = sfx[0];
-        }
-        else if(key== "die")
-        {
-            audioSource.clip = sfx[2];
-        }
-        else if(key == "collect")
-        {
-            audioSource.clip = sfx[3];
-        }
-        else if (key == "kill")
-        {
-            audioSource.clip = sfx[4];
-        }
-        audioSource.Play();
+        //if (key == "jump")
+        //{
+        //    audioSource.clip = sfx[1];
+        //}
+        //else if (key == "dash")
+        //{
+        //    audioSource.clip = sfx[0];
+        //}
+        //else if(key== "die")
+        //{
+        //    audioSource.clip = sfx[2];
+        //}
+        //else if(key == "collect")
+        //{
+        //    audioSource.clip = sfx[3];
+        //}
+        //else if (key == "kill")
+        //{
+        //    audioSource.clip = sfx[4];
+        //}
+        //audioSource.Play();
 
     }
 }

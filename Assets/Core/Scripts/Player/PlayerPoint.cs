@@ -36,5 +36,10 @@ public class PlayerPoint : MonoBehaviour
         {
             TutorialSceneController.Instance.popupCollection.SetActive(false);
         }
+        else if (other.tag == "Gate")
+        {
+            Destroy(other.gameObject);
+            AudioManager.instance.PlaySfx("kill");
+        }
     }
 }
