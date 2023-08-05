@@ -13,6 +13,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
+            AudioManager.instance.PlaySfx("kill");
             Destroy(other.gameObject);
         }
         else if (other.gameObject.tag == "Obstacle")
@@ -34,6 +35,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
+            AudioManager.instance.PlaySfx("kill");
             Destroy(other.gameObject.transform.parent.gameObject);
         }
         else if (other.gameObject.tag == "ChainSaw")

@@ -50,6 +50,10 @@ public class AudioManager : MonoBehaviour
         {
             audioSource.clip = sfx[3];
         }
+        else if (key == "kill")
+        {
+            audioSource.clip = sfx[4];
+        }
         audioSource.Play();
 
     }

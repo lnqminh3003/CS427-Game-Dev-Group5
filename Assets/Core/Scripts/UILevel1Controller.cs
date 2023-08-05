@@ -35,6 +35,7 @@ public class UILevel1Controller : MonoBehaviour
     [Header("Popup")]
     public GameObject GameOverPopup;
     public GameObject LevelCompletePopup;
+    public GameObject FailPopup;
     public GameObject PausePopup;
       
     PlayerHealth playerHealth;

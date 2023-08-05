@@ -64,4 +64,16 @@ public class ItemController : MonoBehaviour
     {
         listItem[id] = true;
     }
+
+    public bool CheckOk()
+    {
+        foreach(var child in listItem)
+        {
+            if(child.Value == false)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
 }
