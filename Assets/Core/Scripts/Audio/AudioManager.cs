@@ -46,6 +46,10 @@ public class AudioManager : MonoBehaviour
         {
             audioSource.clip = sfx[2];
         }
+        else if(key == "collect")
+        {
+            audioSource.clip = sfx[3];
+        }
         audioSource.Play();
 
     }

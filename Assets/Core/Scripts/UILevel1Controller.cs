@@ -4,15 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
-public class LevelController : MonoBehaviour
+public class UILevel1Controller : MonoBehaviour
 {
-    private static LevelController instance;
+    private static UILevel1Controller instance;
 
-    public static LevelController Instance{
+    public static UILevel1Controller Instance{
         get{
             if (instance == null) 
             {
-                instance = FindObjectOfType<LevelController>(true);
+                instance = FindObjectOfType<UILevel1Controller>(true);
             }
              return instance;
         }
@@ -28,27 +28,39 @@ public class LevelController : MonoBehaviour
 
     [Header("Button")]
     public Button PauseButton;
+    public Button Level2Button;
+    public Button RetryButton;
+    public Button MenuButton;
 
     [Header("Popup")]
     public GameObject GameOverPopup;
     public GameObject LevelCompletePopup;
     public GameObject PausePopup;
-    public bool isTutorialDone = false;
-    public bool isMoveTutorialDone =false;
-    public bool isJumpTutorialDone =false;
-    public bool isDoubleJumpTutorialDone =false;
-    public bool isDashTutorialDone =false;
       
     PlayerHealth playerHealth;
 
     private void Start() {
-        PauseButton.onClick.AddListener(OnClickPauseButton);
+        PauseButton.onClick.AddListener(() =>
+        {
+            PausePopup.SetActive(true);
+        });
 
-        playerHealth= FindObjectOfType<PlayerHealth>();
-    }
+        Level2Button.onClick.AddListener(() =>
+        {
+            SceneManager.LoadScene(Scenes.Level2.ToString());
+        });
 
-    private void OnClickPauseButton(){
-        PausePopup.SetActive(true);
+        RetryButton.onClick.AddListener(() =>
+        {
+            SceneManager.LoadScene(Scenes.Level1.ToString());
+        });
+
+        MenuButton.onClick.AddListener(() =>
+        {
+            SceneManager.LoadScene(Scenes.MenuScene.ToString());
+        });
+
+        playerHealth = FindObjectOfType<PlayerHealth>();
     }
 
     private void OnClickGameOverButton(){
@@ -60,26 +72,11 @@ public class LevelController : MonoBehaviour
     }
 
     public void OnClickRestartButton(){
-        Scene scene = SceneManager.GetActiveScene();
-        if(scene.name == Scenes.Level1.ToString())
-        {
-            SceneManager.LoadScene(Scenes.Level1.ToString());
-        }
-        else if(scene.name == Scenes.Level2.ToString()){
-            SceneManager.LoadScene(Scenes.Level2.ToString());
-        }
+        SceneManager.LoadScene(Scenes.Level1.ToString());
     }
 
     public void OnClickMenuButton(){
         SceneManager.LoadScene(Scenes.MenuScene.ToString());
-    }
-
-    public void OnClickNextButton(){
-        Scene scene = SceneManager.GetActiveScene();
-        if(scene.name == Scenes.Level1.ToString())
-        {
-            SceneManager.LoadScene(Scenes.Level2.ToString());
-        }
     }
 
     public void OnClickCancelPopupButton(){
@@ -94,9 +91,5 @@ public class LevelController : MonoBehaviour
 
     public void OnClickMusicButton(){
         
-    }
-
-    public void OpenPopupInventory(int typeBox){
-        ItemController.Instance.FillItemToInventory(typeBox);
     }
 }

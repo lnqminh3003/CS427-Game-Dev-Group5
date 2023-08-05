@@ -6,7 +6,6 @@ using UnityEngine;
 public class ItemScriptableObject : ScriptableObject
 {
     public string[] ids ;
-    public int[] types;
     public Sprite[] sprites; 
 
     public int GetIndex(string id){

@@ -3,27 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InputController : MonoBehaviour
+public class InputController : Singleton<InputController>
 {
-     private static InputController instance;
-
-    public static InputController Instance{
-        get{
-            if (instance == null) 
-            {
-                instance = FindObjectOfType<InputController>(true);
-            }
-             return instance;
-        }
-    }
-
-    private void Awake() {
-        if(instance != null)
-        {
-            Destroy(instance.gameObject);
-        }
-        instance = this;
-    }
 
     bool _isBtnLeftPress;
     bool _isBtnRightPress;
