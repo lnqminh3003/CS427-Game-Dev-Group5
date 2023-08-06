@@ -97,6 +97,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f863bdebe1066461f883a142a6693183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.4
-  Player: {fileID: 0}
-  directionVector: {x: 0, y: 0}
+  speed: 10.76

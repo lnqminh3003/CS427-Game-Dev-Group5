@@ -1,9 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerPoint : MonoBehaviour
 {
+    public TextMeshProUGUI coinText;
+    public GameObject health1;
+    public GameObject health2;
+    public GameObject health3;
+
+    private void Start()
+    {
+        coinText.text = GameManager.Instance.coin.ToString();
+        if(GameManager.Instance.health == 1)
+        {
+            health2.SetActive(false);
+            health3.SetActive(false);
+        }
+        else if (GameManager.Instance.health == 2)
+        {
+            health3.SetActive(false);
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Diamond")
@@ -40,6 +60,13 @@ public class PlayerPoint : MonoBehaviour
         {
             Destroy(other.gameObject);
             AudioManager.instance.PlaySfx("kill");
+        }
+        else if (other.tag == "Coin")
+        {
+            Destroy(other.gameObject);
+            GameManager.Instance.coin += 50;
+            coinText.text = GameManager.Instance.coin.ToString();
+            AudioManager.instance.PlaySfx("collect");
         }
     }
 }

@@ -17,6 +17,8 @@ TagManager:
   - Trigger3
   - Trigger4
   - Trigger5
+  - Gate
+  - Coin
   layers:
   - Default
   - TransparentFX
