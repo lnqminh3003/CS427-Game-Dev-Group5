@@ -1550,6 +1550,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coin: 300
   health: 1
+  fast: 1
 --- !u!4 &754799570
 Transform:
   m_ObjectHideFlags: 0
@@ -1625,10 +1626,10 @@ MonoBehaviour:
       m_Calls: []
   m_text: '20125038 - Le Nguyen Quang Minh
 
-    20125101 - Vuong Huy Hoang Luong
+    20125031 - Pham Viet Hoang
 
-    20125038
-    - Le Nguyen Quang Minh
+    20125032
+    - Truong Viet Hoang
 
     20125101 - Vuong Huy Hoang Luong'
   m_isRightToLeft: 0
@@ -2766,7 +2767,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1482769937}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1265fd399ca4eb24bbe3335771c43a87, type: 3}
