@@ -12,8 +12,13 @@ public class PlayerPoint : MonoBehaviour
 
     private void Start()
     {
+        UpdateHealth();
+    }
+
+    public void UpdateHealth()
+    {
         coinText.text = GameManager.Instance.coin.ToString();
-        if(GameManager.Instance.health == 1)
+        if (GameManager.Instance.health == 1)
         {
             health2.SetActive(false);
             health3.SetActive(false);

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float m_AddVelocity_y;
+    [SerializeField] public float m_AddVelocity_y;
     [SerializeField] private float m_AddVelocity_x;
     [SerializeField] public TrailRenderer tr;
     public float speedMove;
